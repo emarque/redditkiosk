@@ -14,7 +14,7 @@ rp.settings = {
     // Speed of the animation
     animationSpeed: 150,
     shouldAutoNextSlide: true,
-    timeToNextSlide: 20 * 1000,
+    timeToNextSlide: 85 * 1000,
     cookieDays: 300,
     nsfw: false,
     sound: false
