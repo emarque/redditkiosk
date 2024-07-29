@@ -23,7 +23,7 @@ a:hover {
     opacity: 1.0;
     border-bottom:1px dotted;
 }
-.navbox { width:450px; max-height: 40%; overflow: auto; position:relative; left: 0px; opacity: 0.9; background-color: rgba(0,0,0,0.7);z-index:2;}
+.navbox { width:auto; max-height: 40%; overflow: auto; position:relative; left: 0px; opacity: 0.9; background-color: rgba(0,0,0,0.7);z-index:2;}
 /* 108px so the next row is half-visible */
 .numberButtonList { overflow: auto; max-height: 108px; }
 .navbox ul { list-style-type:none; display:block; margin:0px; right:10px; top:10px; text-align: left;}
@@ -62,9 +62,9 @@ a:hover {
 }
 
 #controlsDiv {position: absolute; bottom: 64px; left: 0;right: 0;}
-#titleDiv {position: absolute; top: 0;left: 0;right: 0;}
-.navbox h2 { padding: 10px 20px 10px 10px; font: bold 20px Helvetica, Arial, Sans-serif; }
-.navbox h3 { padding:  0px 20px 10px 10px; font: bold 12px Helvetica, Arial, Sans-serif; }
+#titleDiv {position: absolute; bottom: 0;left: 50%;transform: translate(-50%,0);text-align: center}
+.navbox h2 { padding: 10px 20px 10px 10px; font: 20px Raleway, Sans-serif; }
+.navbox h3 { padding:  0px 20px 10px 10px; font: 12px Raleway, Sans-serif; }
 .navbox p { padding:20px 20px 20px 20px; font-family: "Segoe UI","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Arial,Tahoma,Verdana,sans-serif; font-size:13px; color:#111; }
 .navbox p.bottom { position:absolute; bottom:5px; right:5px; }
 
