@@ -12,11 +12,11 @@ var galleryOffset = 0
 rp.settings = {
     debug: true,
     // Speed of the animation
-    animationSpeed: 100,
+    animationSpeed: 150,
     shouldAutoNextSlide: true,
-    timeToNextSlide: 6 * 1000,
+    timeToNextSlide: 20 * 1000,
     cookieDays: 300,
-    nsfw: true,
+    nsfw: false,
     sound: false
 };
 
