@@ -786,6 +786,9 @@ $(function () {
             // only fix reddit videos
             return;
         }
+        while (Object.hasOwn(photo.data, 'crosspost_parent') {
+          photo.data = photo.data.crosspost_parent_list[0];
+        }
         var url = photo.data.secure_media.reddit_video.dash_url;
         var player = dashjs.MediaPlayer().create();
         player.initialize(document.querySelector("video"), url, true);
