@@ -727,7 +727,9 @@ $(function () {
         vid_jq.one('ended', onEndFunc);
         // Tested on Firefox 43, gfycats that were preloaded do not autoplay when shown so
         // this is the workaround. We also prefer the play to start after the fadein finishes.
-        var playPromise = vid_jq[0].play();
+        var vid = vid_jq[0];
+        vid.muted = true;
+        var playPromise = vid.play();
         if (playPromise && playPromise.catch) {
             // playPromise is `undefined` in firefox 46-48 it seems
             playPromise.catch(function (e) {
