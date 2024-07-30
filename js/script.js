@@ -287,47 +287,50 @@ $(function () {
     };
 
     var initState = function () {
-        var nsfwByCookie = getCookie(cookieNames.nsfwCookie);
-        if (nsfwByCookie === undefined) {
-            rp.settings.nsfw = true;
-        } else {
-            rp.settings.nsfw = (nsfwByCookie === "true");
-            $("#nsfw").prop("checked", rp.settings.nsfw);
-        }
-        $('#nsfw').change(updateNsfw);
+        rp.settings.nsfw = false;
+        //var nsfwByCookie = getCookie(cookieNames.nsfwCookie);
+        //if (nsfwByCookie === undefined) {
+        //    rp.settings.nsfw = true;
+        //} else {
+        //    rp.settings.nsfw = (nsfwByCookie === "true");
+        //    $("#nsfw").prop("checked", rp.settings.nsfw);
+        //}
+        //$('#nsfw').change(updateNsfw);
 
         // Fix sound cookie
-        var soundByCookie = getCookie(cookieNames.soundCookie);
-        if (soundByCookie === undefined) {
-            rp.settings.sound = false;
-        } else {
-            rp.settings.sound = (soundByCookie === "true");
-            $("#sound").prop("checked", rp.settings.sound);
-        }
-        $('#sound').change(updateSound);
-
-        var autoByCookie = getCookie(cookieNames.shouldAutoNextSlideCookie);
-        if (autoByCookie === undefined) {
-            updateAutoNext();
-        } else {
-            rp.settings.shouldAutoNextSlide = (autoByCookie === "true");
-            $("#autoNextSlide").prop("checked", rp.settings.shouldAutoNextSlide);
-        }
-        $('#autoNextSlide').change(updateAutoNext);
+        rp.settings.sound = false;
+        //var soundByCookie = getCookie(cookieNames.soundCookie);
+        //if (soundByCookie === undefined) {
+        //    rp.settings.sound = false;
+        //} else {
+        //    rp.settings.sound = (soundByCookie === "true");
+        //    $("#sound").prop("checked", rp.settings.sound);
+        //}
+        //$('#sound').change(updateSound);
+      
+        updateAutoNext();
+        //var autoByCookie = getCookie(cookieNames.shouldAutoNextSlideCookie);
+        //if (autoByCookie === undefined) {
+        //    updateAutoNext();
+        //} else {
+        //    rp.settings.shouldAutoNextSlide = (autoByCookie === "true");
+        //    $("#autoNextSlide").prop("checked", rp.settings.shouldAutoNextSlide);
+        //}
+        //$('#autoNextSlide').change(updateAutoNext);
 
         var updateTimeToNextSlide = function () {
             var val = $('#timeToNextSlide').val();
             rp.settings.timeToNextSlide = parseFloat(val) * 1000;
-            setCookie(cookieNames.timeToNextSlideCookie, val);
+            //setCookie(cookieNames.timeToNextSlideCookie, val);
         };
-
-        var timeByCookie = getCookie(cookieNames.timeToNextSlideCookie);
-        if (timeByCookie === undefined) {
-            updateTimeToNextSlide();
-        } else {
-            rp.settings.timeToNextSlide = parseFloat(timeByCookie) * 1000;
-            $('#timeToNextSlide').val(timeByCookie);
-        }
+        updateTimeToNextSlide();
+        //var timeByCookie = getCookie(cookieNames.timeToNextSlideCookie);
+        //if (timeByCookie === undefined) {
+        //    updateTimeToNextSlide();
+        //} else {
+        //    rp.settings.timeToNextSlide = parseFloat(timeByCookie) * 1000;
+        //    $('#timeToNextSlide').val(timeByCookie);
+        //}
 
         $('#fullScreenButton').click(toggleFullScreen);
 
